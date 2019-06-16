@@ -1,4 +1,4 @@
-This is the implementation of an equivariant neural network using the MNIST data set.
+This is the implementation of an equivariant neural network on the MNIST data set.
 
 Let M be the space of data (e.g. the space of all rgb pictures of the size 225 * 225 * 3).
 Let N be the space of all possible configuration (e.g. N = { (animal, angle) | animal = cat or dog, angle = 0, pi/2, pi, 3pi/2})
