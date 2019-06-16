@@ -8,7 +8,7 @@ Let G be a group that acts on M.
 (e.g. G is the group of rotation by pi/2 in the counterclockwise direction. 
 In this case, denote G = {r0,r1,r2,r3}, the way that G acts on M is given by the natural rotation)
 
-We also require that G acts on N (e.g.  rk (animal, angle) = (animal, angle + kpi/2 (mod 2 pi))
+We also require that G acts on N (e.g.  rk (animal, angle) = (animal, angle + kpi/2 (mod 2 pi)) for k = 0,1,2,3.
 
 We say the neural network f is G-equivariant, if f(g m) = g f(m), for all m in M and g in G.
 
