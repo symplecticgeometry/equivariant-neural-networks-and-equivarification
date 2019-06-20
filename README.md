@@ -27,3 +27,5 @@ To define a G action on Z, we only need to define how r1 acts on Z:
 suppose h:X->Y is the first layer of a cnn, then we modify it into H:X->Z,
 and Z now has a G-action. So we build another standard cnn layer starting from Z
 and then using the same technic we make it equivariant. Inductively, we get an equivariant neural network.
+
+--to do: clean up the code.
