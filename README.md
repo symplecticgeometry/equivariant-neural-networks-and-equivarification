@@ -35,10 +35,12 @@ To define a *G* action on *N'*, we only need to define how *r1* acts on *N:
  r1 (n0, n1, n2, n3) = (n1, n2, n3, n0).
  ```
 
-Suppose h:X->Y is the first layer of a cnn, then we modify it into H:X->Z,
-and Z now has a G-action. So we build another standard cnn layer starting from Z
-and then using the same technic we make it equivariant. Alternatively, a less interesting thing that one can do is to use the original next level layer from Y, and precompose it with the projection p from Z to Y. Here p: Z to Y is given by 
-p(y0, y1, y2, y3) = y0.
+Suppose *f:M->N is the first layer of a cnn, then we modify it into *F:M->N'*,
+and *N'* now has a *G*-action. So we build another standard cnn layer starting from *N'*
+and then using the same technic we make it equivariant. Alternatively, a less interesting thing that one can do is to use the original next level layer from *N*, and precompose it with the projection p from *N'* to *N*. Here *p: N' -> N* is given by 
+```
+p(n0, n1, n2, n3) = n0.
+```
 Either way, inductively, we get an equivariant neural network.
 
 --to do: clean up the code.
