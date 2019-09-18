@@ -17,17 +17,23 @@ We also require that *G** acts on *N* (e.g.  *rk (animal, angle) = (animal, angl
 f(g m) = g f(m), 
 ```
 **for all *m* in *M* and *g* in *G*.**
-## How to construct an equivariant neural network
+## How to construct an equivariant neural network?
 The idea of achieving an equivariant neural network is the following (the [paper](https://arxiv.org/abs/1906.07172) deals  with more general cases, i.e. an arbitrary group *G*):
 
 Given function *f: M -> N* as above.
 
 We modify *f* and *N* to: 
 *F: M -> N'*, so that *N'* is an "enlargement" of *N*, *G* acts on *N'*, and *F* is *G*-equivariant as follows.
-Define *N' = N^4 = Y cross Y cross Y cross Y*. (here we assume G is a cyclic group of order 4, please refer to the [paper](https://arxiv.org/abs/1906.07172) for general case).
-H(x) = (h(x), h(r1 x), h(r2 x), h(r3 x)).
-To define a G action on Z, we only need to define how r1 acts on Z:
- r1 (y0, y1, y2, y3) = (y1, y2, y3, y0).
+Define *N' = N^4 = N *x* N *x* N *x* N*. (Here we assume as before *G* is a cyclic group of order 4, please refer to the [paper](https://arxiv.org/abs/1906.07172) for the general case).
+We define 
+```
+F(m) = (h(m), h(r1 m), h(r2 m), h(r3 m)),
+```
+where *rk m* means rotating the image *m* counterclockwise by *k\*pi/2*.
+To define a *G* action on *N'*, we only need to define how *r1* acts on *N:
+ ```
+ r1 (n0, n1, n2, n3) = (n1, n2, n3, n0).
+ ```
 
 Suppose h:X->Y is the first layer of a cnn, then we modify it into H:X->Z,
 and Z now has a G-action. So we build another standard cnn layer starting from Z
