@@ -43,8 +43,7 @@ p(n0, n1, n2, n3) = n0.
 ```
 Either way, inductively, we get an equivariant neural network.
 
-## Implementation and illustration
-We pick a arbitrary cnn digit classifier, and equivarify it. 
-The code is written in tensorflow. There are two versions. V2 is a better version, and it can handle arbitrary neural networks and arbitrary groups.
+## Implementation and versions
+The code is written in tensorflow. There are two versions. V2 is a better version, and it can handle arbitrary neural networks and arbitrary groups. (V1 is not overwritten due to paper submission requirements).
 
 --to do: clean up the code.
