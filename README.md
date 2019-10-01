@@ -10,7 +10,7 @@ Then a neural network is a function *f* from *M* to *N*.
 Let *G* be a group that acts on *M*. 
 E.g. *G* has four elements, and denote it by *G = {r0,r1,r2,r3}*. And *ri* acts on image in *M* by rotating it by *i \* pi/2* in the counterclockwise direction. 
 
-We also require that *G** acts on *N* (e.g.  *rk (animal, angle) = (animal, angle + k\*pi/2 (mod 2 pi)) for k = 0,1,2,3*.
+We also require that *G* acts on *N* (e.g.  *rk (animal, angle) = (animal, angle + k\*pi/2 (mod 2 pi)) for k = 0,1,2,3*.
 
 **We say the neural network *f* is *G*-equivariant, if**
 ```
@@ -30,12 +30,12 @@ We define
 F(m) = (h(m), h(r1 m), h(r2 m), h(r3 m)),
 ```
 where *rk m* means rotating the image *m* counterclockwise by *k\*pi/2*.
-To define a *G* action on *N'*, we only need to define how *r1* acts on *N:
+To define a *G* action on *N'*, we only need to define how *r1* acts on *N*:
  ```
  r1 (n0, n1, n2, n3) = (n1, n2, n3, n0).
  ```
 
-Suppose *f:M->N is the first layer of a cnn, then we modify it into *F:M->N'*,
+Suppose *f:M->N* is the first layer of a cnn, then we modify it into *F:M->N'*,
 and *N'* now has a *G*-action. So we build another standard cnn layer starting from *N'*
 and then using the same technic we make it equivariant. Alternatively, a less interesting thing that one can do is to use the original next level layer from *N*, and precompose it with the projection p from *N'* to *N*. Here *p: N' -> N* is given by 
 ```
